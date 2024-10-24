@@ -9,6 +9,6 @@ form.addEventListener("submit", (event) => {
   result.innerText = parseInt(dividend / divider);
 });
 
-if (!dividend) {
+if (!dividend || !divider) {
   return "Division not performed. Both values are required in inputs. Try again.";
 }
