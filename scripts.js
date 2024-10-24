@@ -1,5 +1,5 @@
-const form = document.querySelector("[data-form]");
-const result = document.querySelector("[data-result]");
+const form = document.querySelector("[data-form]"); //dividend & divider
+const result = document.querySelector("[data-result]"); //output message
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -8,3 +8,7 @@ form.addEventListener("submit", (event) => {
   const { dividend, divider } = Object.fromEntries(entries);
   result.innerText = parseInt(dividend / divider);
 });
+
+if (!dividend) {
+  return "Division not performed. Both values are required in inputs. Try again.";
+}
