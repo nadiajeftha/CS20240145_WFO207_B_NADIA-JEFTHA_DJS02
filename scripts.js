@@ -11,5 +11,11 @@ form.addEventListener("submit", (event) => {
       "Division not performed. Both values are required in inputs. Try again.";
     return;
   }
+
+  if (dividend || divider === "0") {
+    result.innerHTML =
+      "Division not performed. Invalid number provided. Try again.";
+    return;
+  }
   result.innerText = parseInt(dividend / divider);
 });
