@@ -15,7 +15,7 @@ form.addEventListener("submit", (event) => {
   if (divider === "0") {
     result.innerHTML =
       "Division not performed. Invalid number provided. Try again.";
-    console.log("Call stack:", new Error().stack);
+    console.error("Call stack:", new Error().stack);
     return;
   }
   result.innerText = parseInt(dividend / divider);
