@@ -7,7 +7,8 @@ form.addEventListener("submit", (event) => {
   const { dividend, divider } = Object.fromEntries(entries);
 
   if (isNaN(dividend) || isNaN(divider)) {
-    result.innerHTML = "Something critical went wrong. Please reload the page.";
+    document.body.innerHTML =
+      "Something critical went wrong. Please reload the page.";
     console.error("Call stack:", new Error().stack);
     return;
   }
